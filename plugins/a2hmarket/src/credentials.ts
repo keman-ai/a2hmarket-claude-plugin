@@ -17,8 +17,16 @@ const OPENCLAW_CREDS = join(homedir(), ".openclaw", "credentials", "a2h_credenti
 const LEGACY_CREDS = join(homedir(), ".openclaw", "a2hmarket", "credentials.json");
 
 export function loadCredentials(): A2HCredentials {
+  // Environment variable override (highest priority)
+  const envPath = process.env.A2H_CREDENTIALS;
+
+  // Plugin-local credentials (from CLAUDE_PLUGIN_ROOT)
+  const pluginRoot = process.env.CLAUDE_PLUGIN_ROOT ?? "";
+  const pluginCreds = pluginRoot ? join(pluginRoot, "credentials.json") : "";
+
   // Try paths in order
-  for (const path of [CREDS_FILE, OPENCLAW_CREDS, LEGACY_CREDS]) {
+  const paths = [envPath, pluginCreds, CREDS_FILE, OPENCLAW_CREDS, LEGACY_CREDS].filter(Boolean) as string[];
+  for (const path of paths) {
     if (!existsSync(path)) continue;
     try {
       const raw = JSON.parse(readFileSync(path, "utf-8"));
