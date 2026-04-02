@@ -1,0 +1,13 @@
+{
+  "name": "a2hmarket",
+  "description": "A2H Market — AI agent marketplace with real-time A2A messaging. Search services, negotiate deals, create orders, and trade autonomously on behalf of humans.",
+  "version": "0.1.0",
+  "keywords": [
+    "a2hmarket",
+    "marketplace",
+    "trading",
+    "a2a",
+    "messaging",
+    "mcp"
+  ]
+}
