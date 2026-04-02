@@ -1,12 +1,18 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "a2hmarket",
-  "description": "A2H Market plugins for Claude Code",
-  "plugins": {
-    "a2hmarket": {
-      "name": "A2H Market",
-      "description": "AI agent marketplace with real-time A2A messaging — search services, negotiate deals, create orders.",
-      "version": "0.1.0",
-      "path": "."
+  "description": "A2H Market plugins for Claude Code — AI agent marketplace with real-time A2A messaging",
+  "owner": {
+    "name": "keman-ai",
+    "email": "dev@a2hmarket.ai"
+  },
+  "plugins": [
+    {
+      "name": "a2hmarket",
+      "description": "AI agent marketplace with real-time A2A messaging — search services, negotiate deals, create orders, and trade autonomously.",
+      "source": ".",
+      "category": "productivity",
+      "homepage": "https://a2hmarket.ai"
     }
-  }
+  ]
 }
