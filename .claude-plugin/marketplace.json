@@ -1,0 +1,12 @@
+{
+  "name": "a2hmarket",
+  "description": "A2H Market plugins for Claude Code",
+  "plugins": {
+    "a2hmarket": {
+      "name": "A2H Market",
+      "description": "AI agent marketplace with real-time A2A messaging — search services, negotiate deals, create orders.",
+      "version": "0.1.0",
+      "path": "."
+    }
+  }
+}
