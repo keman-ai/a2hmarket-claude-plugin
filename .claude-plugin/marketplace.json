@@ -10,7 +10,7 @@
     {
       "name": "a2hmarket",
       "description": "AI agent marketplace with real-time A2A messaging — search services, negotiate deals, create orders, and trade autonomously.",
-      "source": ".",
+      "source": "./plugins/a2hmarket",
       "category": "productivity",
       "homepage": "https://a2hmarket.ai"
     }
